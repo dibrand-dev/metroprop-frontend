@@ -1,0 +1,143 @@
+.find-your-space {
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.find-your-space-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.find-your-space-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 52px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 24px 24px 24px;
+  min-width: 520px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.search-tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.search-tab {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6B7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.search-tab:hover {
+  color: #1f2937;
+}
+
+.search-tab.active {
+  color: #2563eb;
+}
+
+.search-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2563eb;
+  border-radius: 1px;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f2937;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: #9CA3AF;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .find-your-space {
+    height: 400px;
+  }
+
+  .find-your-space-title {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0 20px;
+  }
+
+  .search-card {
+    min-width: auto;
+    width: calc(100% - 40px);
+    max-width: 520px;
+    padding: 12px 16px 16px 16px;
+  }
+
+  .search-tabs {
+    gap: 16px;
+  }
+
+  .search-tab {
+    font-size: 14px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}

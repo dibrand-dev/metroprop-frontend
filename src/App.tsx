@@ -1,13 +1,13 @@
 import Navbar from './components/Navbar'
+import FindYourSpace from './components/FindYourSpace'
 import './App.css'
 
 function App() {
   return (
     <div className="app">
       <Navbar />
+      <FindYourSpace />
       <main className="main-content">
-        {/* Your page content goes here */}
-        <h1>Bem-vindo ao Metroprop</h1>
       </main>
     </div>
   )
