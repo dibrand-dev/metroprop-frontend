@@ -1,12 +1,10 @@
-import Navbar from './components/Navbar'
-import FindYourSpace from './components/FindYourSpace'
+import Hero from './pages/Hero'
 import './App.css'
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <FindYourSpace />
+      <Hero />
       <main className="main-content">
       </main>
     </div>
