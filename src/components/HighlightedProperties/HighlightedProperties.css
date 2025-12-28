@@ -159,15 +159,51 @@
 
   .highlighted-properties-title {
     font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .highlighted-properties-carousel {
+    gap: 12px;
   }
 
   .highlighted-property-card {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 160px;
+    max-width: 160px;
   }
 
   .highlighted-property-image {
-    height: 120px;
+    height: 100px;
+    padding: 6px 6px 0 6px;
+  }
+
+  .highlighted-property-info {
+    padding: 8px;
+  }
+
+  .highlighted-property-type {
+    font-size: 10px;
+  }
+
+  .highlighted-property-price {
+    font-size: 14px;
+  }
+
+  .highlighted-remax-logo {
+    height: 18px;
+  }
+
+  .highlighted-property-address {
+    font-size: 12px;
+  }
+
+  .highlighted-property-location {
+    font-size: 11px;
+  }
+
+  .highlighted-property-details {
+    font-size: 10px;
+    gap: 8px;
   }
 
   .highlighted-carousel-arrow {

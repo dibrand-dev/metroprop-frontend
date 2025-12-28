@@ -113,31 +113,48 @@
 
 @media (max-width: 768px) {
   .find-your-space {
-    height: 400px;
+    height: 251px;
+  }
+
+  .find-your-space-overlay {
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
   }
 
   .find-your-space-title {
-    font-size: 32px;
-    line-height: 40px;
-    padding: 0 20px;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 0 16px;
   }
 
   .search-card {
     min-width: auto;
-    width: calc(100% - 40px);
-    max-width: 520px;
+    width: calc(100% - 32px);
+    max-width: 100%;
     padding: 12px 16px 16px 16px;
+    margin: 0 16px;
   }
 
   .search-tabs {
     gap: 16px;
+    justify-content: flex-start;
   }
 
   .search-tab {
     font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .search-input-container {
+    padding: 10px 12px;
   }
 
   .search-input {
     font-size: 14px;
+  }
+
+  .search-input::placeholder {
+    font-size: 12px;
   }
 }
