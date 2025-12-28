@@ -191,10 +191,64 @@
 
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-description {
+    font-size: 13px;
+    margin-bottom: 16px;
   }
 
   .footer-social {
-    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .footer-social img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-links li a {
+    font-size: 13px;
+  }
+
+  .footer-fiscal {
+    margin-bottom: 12px;
+  }
+
+  .fiscal-img {
+    width: 45px;
+    height: 64px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding: 12px 16px;
+  }
+
+  .dibrand-logo {
+    height: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
   }
 }

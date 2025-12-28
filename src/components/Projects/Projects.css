@@ -87,12 +87,43 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .projects {
+    padding: 24px 16px;
+  }
+
   .projects-container {
     flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
   .project-card {
-    flex: 1 1 100%;
+    flex: none;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .project-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+
+  .project-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .project-description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .project-button {
+    width: auto;
+    padding: 10px 24px;
   }
 }
