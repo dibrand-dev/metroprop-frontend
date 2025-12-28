@@ -4,14 +4,5 @@
 }
 
 .main-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.main-content h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #1f2937;
+  display: none;
 }

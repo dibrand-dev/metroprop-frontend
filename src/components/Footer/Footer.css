@@ -1,0 +1,200 @@
+.footer {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.footer-main {
+  border-top: 1px solid #E5E7EB;
+  padding: 48px 24px;
+}
+
+.footer-container {
+  max-width: 1392px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 160px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.footer-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #6B7280;
+  margin: 0 0 24px 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-contact p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f2937;
+  margin: 0;
+}
+
+.footer-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+  color: #2563eb;
+}
+
+.footer-legal .footer-links {
+  margin-bottom: 24px;
+}
+
+.footer-fiscal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fiscal-img {
+  width: 57px;
+  height: 81px;
+}
+
+.fiscal-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.fiscal-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.fiscal-text p:first-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.footer-copyright {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #E5E7EB;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dibrand-logo {
+  height: 20px;
+  width: auto;
+}
+
+.footer-bottom p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.footer-bottom p strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main {
+    padding: 32px 16px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}

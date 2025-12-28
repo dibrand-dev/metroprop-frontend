@@ -3,6 +3,7 @@ import FindYourSpace from '../../components/FindYourSpace';
 import Projects from '../../components/Projects';
 import VisitedProperties from '../../components/VisitedProperties';
 import HighlightedProperties from '../../components/HighlightedProperties';
+import Footer from '../../components/Footer';
 import './Hero.css';
 
 const Hero = () => {
@@ -13,6 +14,7 @@ const Hero = () => {
       <Projects />
       <VisitedProperties />
       <HighlightedProperties />
+      <Footer />
     </section>
   );
 };
