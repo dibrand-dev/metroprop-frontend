@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import logoMobile from '../../assets/logomobile.png';
@@ -15,6 +16,7 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -24,6 +26,10 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login');
   };
 
   return (
@@ -78,7 +84,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-actions">
-          <button className="btn-login">Ingresar</button>
+          <button className="btn-login" onClick={handleLoginClick}>Ingresar</button>
         </div>
       </div>
 
