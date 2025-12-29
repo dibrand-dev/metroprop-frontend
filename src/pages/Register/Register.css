@@ -1,0 +1,361 @@
+.register-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.register-form-section {
+  width: 40%;
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.register-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.register-form-section .back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #1f2937;
+  padding: 0;
+}
+
+.register-form-section .back-button:hover {
+  color: #2563eb;
+}
+
+.register-form-section .close-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.register-form-container {
+  width: 100%;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-logo {
+  width: 160px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 32px;
+}
+
+.register-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.003em;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-form .form-group {
+  width: 100%;
+}
+
+.register-form .form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f2937;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.register-form .form-input::placeholder {
+  color: #9CA3AF;
+}
+
+.register-form .form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.register-form .password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.register-form .password-input-container .form-input {
+  padding-right: 48px;
+}
+
+.register-form .toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.register-button:hover {
+  background-color: #1d4ed8;
+}
+
+.login-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6B7280;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.login-link {
+  color: #1f2937;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.register-form-section .divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.register-form-section .divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #E5E7EB;
+}
+
+.register-form-section .divider-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+.register-form-section .google-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 24px;
+}
+
+.register-form-section .google-button:hover {
+  background-color: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2563eb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background-color: #2563eb;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  content: '';
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.checkbox-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.professional-section {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.professional-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B7280;
+  margin: 0 0 8px 0;
+}
+
+.professional-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.professional-link:hover {
+  text-decoration: underline;
+}
+
+.register-image-section {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+@media (max-width: 768px) {
+  .register-form-section {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .register-image-section {
+    display: none;
+  }
+
+  .register-form-container {
+    width: 100%;
+  }
+
+  .register-header {
+    margin-bottom: 24px;
+  }
+
+  .register-form-section .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .register-logo {
+    width: 160px;
+    height: 48px;
+    margin-bottom: 24px;
+  }
+
+  .register-title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  .register-form .form-input {
+    padding: 16px;
+  }
+
+  .register-button {
+    padding: 16px 24px;
+  }
+
+  .register-form-section .google-button {
+    padding: 16px 24px;
+  }
+
+  .login-text {
+    margin: 20px 0;
+  }
+
+  .register-form-section .divider {
+    margin-bottom: 20px;
+  }
+}

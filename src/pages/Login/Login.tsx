@@ -95,7 +95,7 @@ const Login = () => {
           </form>
 
           <p className="signup-text">
-            ¿No tenés cuenta? <a href="#" className="signup-link">Crear una cuenta</a>
+            ¿No tenés cuenta? <a href="#" onClick={(e) => { e.preventDefault(); navigate('/register'); }} className="signup-link">Crear una cuenta</a>
           </p>
 
           <div className="divider">
