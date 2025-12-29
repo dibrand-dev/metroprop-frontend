@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './pages/Hero'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import RegisterProfessional from './pages/RegisterProfessional'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/register-professional" element={<RegisterProfessional />} />
         </Routes>
       </div>
     </Router>

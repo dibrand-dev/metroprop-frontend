@@ -161,7 +161,7 @@ const Register = () => {
               ¿Formás parte del mercado inmobiliario<br />
               y aún no tenés cuenta?
             </p>
-            <a href="#" className="professional-link">Crear cuenta profesional</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); navigate('/register-professional'); }} className="professional-link">Crear cuenta profesional</a>
           </div>
         </div>
       </div>
