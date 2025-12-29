@@ -13,11 +13,18 @@ const Register = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle register logic here
     console.log('Register:', { email, password, confirmPassword, acceptTerms, acceptPrivacy });
+    setShowEmailModal(true);
+  };
+
+  const handleResendEmail = () => {
+    // Handle resend email logic here
+    console.log('Resend email to:', email);
   };
 
   const handleGoogleRegister = () => {
@@ -169,6 +176,34 @@ const Register = () => {
       <div className="register-image-section">
         <img src={loginImage} alt="Register" className="register-image" />
       </div>
+
+      {showEmailModal && (
+        <div className="email-modal-overlay">
+          <div className="email-modal">
+            <button className="email-modal-close" onClick={() => setShowEmailModal(false)}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L5 15M5 5L15 15" stroke="#1f2937" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="email-modal-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="#22C55E"/>
+                <path d="M14 24L21 31L34 18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h2 className="email-modal-title">
+              ¡Te enviamos un e-mail para<br />validar tu cuenta!
+            </h2>
+            <p className="email-modal-text">
+              Ingresa a tu casilla de mail<br />
+              <span className="email-modal-email">{email || 'tuemail@gmail.com'}</span> para continuar.
+            </p>
+            <button className="email-modal-resend" onClick={handleResendEmail}>
+              No recibí el e-mail
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
