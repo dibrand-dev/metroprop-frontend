@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import './Login.css';
 import logo from '../../assets/logo.png';
 import loginImage from '../../assets/logIn.png';
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -14,11 +16,15 @@ const Login = () => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login:', { email, password });
+    login(email);
+    navigate('/');
   };
 
   const handleGoogleLogin = () => {
     // Handle Google login logic here
     console.log('Google login');
+    login('usuario@gmail.com');
+    navigate('/');
   };
 
   return (
