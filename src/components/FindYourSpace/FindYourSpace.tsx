@@ -1,12 +1,26 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FindYourSpace.css';
 import backgroundImage from '../../assets/findyourspace.png';
 
 type TabType = 'comprar' | 'alquilar' | 'emprendimientos';
 
 const FindYourSpace = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<TabType>('comprar');
   const [searchValue, setSearchValue] = useState('');
+
+  const handleSearch = () => {
+    if (searchValue.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchValue)}&type=${activeTab}`);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <section 
@@ -45,8 +59,9 @@ const FindYourSpace = () => {
               placeholder="Escribí una ubicación o alguna característica"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
+              onKeyPress={handleKeyPress}
             />
-            <button className="search-button" aria-label="Buscar">
+            <button className="search-button" onClick={handleSearch} aria-label="Buscar">
               <svg
                 width="20"
                 height="20"

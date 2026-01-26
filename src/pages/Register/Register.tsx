@@ -17,18 +17,15 @@ const Register = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle register logic here
     console.log('Register:', { email, password, confirmPassword, acceptTerms, acceptPrivacy });
     setShowEmailModal(true);
   };
 
   const handleResendEmail = () => {
-    // Handle resend email logic here
     console.log('Resend email to:', email);
   };
 
   const handleGoogleRegister = () => {
-    // Handle Google register logic here
     console.log('Google register');
   };
 
