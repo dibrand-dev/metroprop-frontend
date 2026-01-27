@@ -269,7 +269,6 @@ const PropertyDetail = () => {
             </div>
           </div>
 
-          {/* Mobile: Advertiser card above problem block */}
           <div className="pd-advertiser-mobile">
             <div className="pd-advertiser-card-mobile">
               <div className="pd-advertiser-header">
@@ -380,7 +379,6 @@ const PropertyDetail = () => {
               </button>
             </div>
           </div>
-          {/* Desktop only: Advertiser card in sidebar */}
           <div className="pd-advertiser-card">
             <div className="pd-advertiser-header">
               <img src={remaxLogo} alt="RE/MAX" className="pd-advertiser-logo" />

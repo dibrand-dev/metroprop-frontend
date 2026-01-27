@@ -141,8 +141,9 @@
 }
 
 .navbar-logo .logo-desktop {
-  height: 32px;
-  width: auto;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
 }
 
 .navbar-logo .logo-mobile {

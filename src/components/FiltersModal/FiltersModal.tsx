@@ -74,9 +74,10 @@ const PriceHistogram = ({ data, value, onChange, minValue = 0, maxValue = 100 }:
     }
   };
 
-  const percentToValue = (percent: number) => {
+  const _percentToValue = (percent: number) => {
     return Math.round(minValue + (percent / 100) * (maxValue - minValue));
   };
+  void _percentToValue;
 
   return (
     <div className="filters-histogram">
@@ -257,7 +258,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
   return (
     <div className="filters-modal-overlay" onClick={handleOverlayClick}>
       <div className="filters-modal">
-        {/* Header */}
         <div className="filters-modal-header">
           <h2 className="filters-modal-title">{propertyCount.toLocaleString()} propiedades</h2>
           <button className="filters-modal-close" onClick={onClose}>
@@ -265,9 +265,7 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
           </button>
         </div>
 
-        {/* Content */}
         <div className="filters-modal-content">
-          {/* Tipo de operación */}
           <div className="filters-section">
             <h3 className="filters-section-title">Tipo de operación</h3>
             <div className="filters-radio-group">
@@ -286,7 +284,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Precio */}
           <div className="filters-section">
             <h3 className="filters-section-title">Precio</h3>
             <div className="filters-radio-group filters-radio-inline">
@@ -329,7 +326,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Precio m² */}
           <div className="filters-section">
             <h3 className="filters-section-title">Precio m²</h3>
             <div className="filters-radio-group filters-radio-inline">
@@ -380,7 +376,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Superficie */}
           <div className="filters-section">
             <h3 className="filters-section-title">Superficie</h3>
             <div className="filters-radio-group filters-radio-inline">
@@ -419,7 +414,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Tipo de propiedad */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('tipoPropiedad')}>
               <h3 className="filters-section-title">Tipo de propiedad</h3>
@@ -445,7 +439,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </button>
           </div>
 
-          {/* Ambientes y Dormitorios */}
           <div className="filters-section">
             <div className="filters-dropdowns-row">
               <div className="filters-dropdown-col">
@@ -471,7 +464,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Baños y Cocheras */}
           <div className="filters-section">
             <div className="filters-dropdowns-row">
               <div className="filters-dropdown-col">
@@ -496,7 +488,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Tipo de anunciante y Antigüedad */}
           <div className="filters-section">
             <div className="filters-dropdowns-row">
               <div className="filters-dropdown-col">
@@ -536,7 +527,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </div>
           </div>
 
-          {/* Tipo de ambientes */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('tipoAmbientes')}>
               <h3 className="filters-section-title">Tipo de ambientes</h3>
@@ -562,7 +552,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </button>
           </div>
 
-          {/* Disposición */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('disposicion')}>
               <h3 className="filters-section-title">Disposición</h3>
@@ -585,7 +574,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             )}
           </div>
 
-          {/* Comodidades / amenities */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('comodidades')}>
               <h3 className="filters-section-title">Comodidades / amenities</h3>
@@ -611,7 +599,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </button>
           </div>
 
-          {/* Características de la propiedad */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('caracteristicas')}>
               <h3 className="filters-section-title">Características de la propiedad</h3>
@@ -637,7 +624,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </button>
           </div>
 
-          {/* Subtipo de propiedad */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('subtipo')}>
               <h3 className="filters-section-title">Subtipo de propiedad</h3>
@@ -663,7 +649,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
             </button>
           </div>
 
-          {/* Servicios */}
           <div className="filters-section">
             <button className="filters-section-header" onClick={() => toggleSection('servicios')}>
               <h3 className="filters-section-title">Servicios</h3>
@@ -690,7 +675,6 @@ const FiltersModal = ({ isOpen, onClose, onApply, propertyCount = 64875 }: Filte
           </div>
         </div>
 
-        {/* Footer */}
         <div className="filters-modal-footer">
           <button className="filters-btn-clear" onClick={handleClearFilters}>
             Limpiar filtros

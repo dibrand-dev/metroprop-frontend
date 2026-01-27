@@ -12,18 +12,19 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
     console.log('Login:', { email, password });
-    login(email);
-    navigate('/');
+    const result = await login(email, password);
+    if (result.success) {
+      navigate('/');
+    } else {
+      console.error('Login failed:', result.error);
+    }
   };
 
   const handleGoogleLogin = () => {
-    // Handle Google login logic here
     console.log('Google login');
-    login('usuario@gmail.com');
     navigate('/');
   };
 

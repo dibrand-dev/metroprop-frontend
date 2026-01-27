@@ -114,7 +114,10 @@ const Navbar = ({ showMobileSearch = false, searchValue = '', onSearchChange, ha
   return (
     <nav className={`navbar ${showMobileSearch ? 'navbar-with-search' : ''}`}>
       <div className="navbar-container">
-        <img src={logo} alt="Metroprop" className="navbar-logo" style={{ maxWidth: '180px', width: '100%' }} />
+        <div className="navbar-logo">
+          <img src={logo} alt="Metroprop" className="logo-desktop" />
+          <img src={logoMobile} alt="Metroprop" className="logo-mobile" />
+        </div>
 
         <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
