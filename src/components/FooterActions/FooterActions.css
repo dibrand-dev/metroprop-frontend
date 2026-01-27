@@ -1,0 +1,56 @@
+.footer-actions {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .footer-actions {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #fff;
+    z-index: 2000;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+    padding: 12px 0 16px 0;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+.footer-actions-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.footer-actions-btn.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.footer-actions-btn.contact {
+  background: #1677ff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer-actions {
+    gap: 8px;
+    padding: 12px 0 16px 0;
+  }
+  .footer-actions-btn {
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 12px;
+  }
+}

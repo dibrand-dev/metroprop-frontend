@@ -1,10 +1,12 @@
+/* Navbar sempre fixa no topo, em todos os dispositivos */
 .navbar {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-container {

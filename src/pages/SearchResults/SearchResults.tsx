@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import FiltersModal from '../../components/FiltersModal';
 import AlertModal from '../../components/AlertModal';
@@ -21,6 +22,7 @@ const sortOptions = [
 const MOCK_ADDRESS = 'Juan Francisco Segui 4500';
 
 const SearchResults = () => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'map' | 'list'>('list');
   const [sortOpen, setSortOpen] = useState(false);
   const [sortMobileOpen, setSortMobileOpen] = useState(false);
@@ -222,7 +224,12 @@ const SearchResults = () => {
           {hasResults ? (
             <div className={`sr-list ${viewMode === 'list' ? 'sr-list-grid' : ''}`}>
               {properties.map((property) => (
-                <div key={property.id} className={`sr-card ${viewMode === 'list' ? 'sr-card-grid' : ''}`}>
+                <div 
+                  key={property.id} 
+                  className={`sr-card ${viewMode === 'list' ? 'sr-card-grid' : ''}`}
+                  onClick={() => navigate(`/property/${property.id}`)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div className="sr-card-image-container">
                     <img src={resultsCardGrid} alt="Propiedad" className="sr-card-img-grid" />
                   </div>
@@ -255,7 +262,7 @@ const SearchResults = () => {
                       310 m² tot.  4 amb.  2 baños
                     </div>
                   </div>
-                  <button className="sr-card-fav">
+                  <button className="sr-card-fav" onClick={(e) => e.stopPropagation()}>
                     <FiHeart size={20} />
                   </button>
                 </div>

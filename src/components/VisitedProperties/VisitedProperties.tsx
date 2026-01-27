@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './VisitedProperties.css';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
@@ -73,6 +74,8 @@ const properties: Property[] = [
 const loopedProperties = [...properties, ...properties, ...properties];
 
 const VisitedProperties = () => {
+  const navigate = useNavigate();
+
   const scrollRight = () => {
     const container = document.querySelector('.properties-carousel');
     if (container) {
@@ -93,7 +96,12 @@ const VisitedProperties = () => {
         <div className="properties-wrapper">
           <div className="properties-carousel">
             {loopedProperties.map((property, index) => (
-              <div key={index} className="property-card">
+              <div 
+                key={index} 
+                className="property-card"
+                onClick={() => navigate(`/property/${(index % properties.length) + 1}`)}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="property-image">
                   <img src={property.image} alt={property.address} />
                 </div>

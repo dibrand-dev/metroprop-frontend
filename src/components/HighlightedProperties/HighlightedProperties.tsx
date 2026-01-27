@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './HighlightedProperties.css';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
@@ -73,6 +74,8 @@ const properties: Property[] = [
 const loopedProperties = [...properties, ...properties, ...properties];
 
 const HighlightedProperties = () => {
+  const navigate = useNavigate();
+
   const scrollRight = () => {
     const container = document.querySelector('.highlighted-properties-carousel');
     if (container) {
@@ -93,7 +96,12 @@ const HighlightedProperties = () => {
         <div className="highlighted-properties-wrapper">
           <div className="highlighted-properties-carousel">
             {loopedProperties.map((property, index) => (
-              <div key={index} className="highlighted-property-card">
+              <div 
+                key={index} 
+                className="highlighted-property-card"
+                onClick={() => navigate(`/property/${(index % properties.length) + 1}`)}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="highlighted-property-image">
                   <img src={property.image} alt={property.address} />
                 </div>
