@@ -114,6 +114,8 @@ const Navbar = ({ showMobileSearch = false, searchValue = '', onSearchChange, ha
   return (
     <nav className={`navbar ${showMobileSearch ? 'navbar-with-search' : ''}`}>
       <div className="navbar-container">
+        <img src={logo} alt="Metroprop" className="navbar-logo" style={{ maxWidth: '180px', width: '100%' }} />
+
         <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 12H21M3 6H21M3 18H21" stroke="#1f2937" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -191,13 +193,6 @@ const Navbar = ({ showMobileSearch = false, searchValue = '', onSearchChange, ha
             </li>
           ))}
         </ul>
-
-        <div className="navbar-logo">
-          <a href="/">
-            <img src={logo} alt="Metroprop" className="logo-desktop" />
-            <img src={logoMobile} alt="Metroprop" className="logo-mobile" />
-          </a>
-        </div>
 
         <div className="navbar-actions">
           {isAuthenticated ? (

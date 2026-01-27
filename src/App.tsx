@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import RegisterProfessional from './pages/RegisterProfessional'
 import SearchResults from './pages/SearchResults'
+import PropertyDetail from './pages/PropertyDetail'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/register-professional" element={<RegisterProfessional />} />
             <Route path="/search" element={<SearchResults />} />
+            <Route path="/property/:id" element={<PropertyDetail />} />
           </Routes>
         </div>
       </Router>
