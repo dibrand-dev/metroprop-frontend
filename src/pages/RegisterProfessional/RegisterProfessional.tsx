@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PhoneInput from 'react-phone-input-2';
+import es from 'react-phone-input-2/lang/es.json';
+import 'react-phone-input-2/lib/style.css';
 import './RegisterProfessional.css';
 import loginImage from '../../assets/logIn.png';
 
@@ -155,14 +158,23 @@ const RegisterProfessional = () => {
                   required
                 />
               </div>
-              <div className="form-group">
-                <input
-                  type="tel"
-                  placeholder="Teléfono móvil*"
+              <div className="form-group phone-input-group">
+                <PhoneInput
+                  country="ar"
                   value={telefono}
-                  onChange={(e) => setTelefono(e.target.value)}
-                  className="form-input"
-                  required
+                  onChange={(value) => setTelefono(value)}
+                  localization={es}
+                  enableSearch
+                  searchPlaceholder="Buscar país..."
+                  inputProps={{
+                    required: true,
+                    placeholder: 'Teléfono móvil*'
+                  }}
+                  containerClass="phone-input-container"
+                  inputClass="phone-input-field"
+                  buttonClass="phone-input-button"
+                  dropdownClass="phone-input-dropdown"
+                  searchClass="phone-input-search"
                 />
               </div>
             </div>
